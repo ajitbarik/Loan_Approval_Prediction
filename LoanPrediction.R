@@ -77,6 +77,6 @@ Prediction <- predict(fitCRF, test, OOB=TRUE, type = "response")
 submit <- data.frame(Loan_ID = test$Loan_ID, Loan_Status = Prediction)
 write.csv(submit, file = "FinalForest.csv", row.names = FALSE)
 
-#implementing exteme gradient boosting
-require(xgboost)
-bstSparse <- xgboost(data = data, label = data$Loan_Status , max.depth = 2, eta = 1, nthread = 2, nround = 2, objective = "binary:logistic")
+#implementing exteme gradient boosting(WIP)
+#require(xgboost)
+#bstSparse <- xgboost(data = data, label = data$Loan_Status , max.depth = 2, eta = 1, nthread = 2, nround = 2, objective = "binary:logistic")
